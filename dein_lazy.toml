@@ -278,7 +278,7 @@ source ~/.config/nvim/plugins/fugitive.vim
 
 [[plugins]]
 repo = 'billyvg/tigris.nvim'
-on_ft = ['javascript', 'javascript.jsx']
+on_ft = ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx']
 hook_post_update = '''
 let g:dein#plugin.build = './install.sh'
 '''
