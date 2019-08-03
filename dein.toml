@@ -19,27 +19,6 @@ on_source = ['denite.nvim']
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
-repo = 'thinca/vim-themis'
-
-[[plugins]]
-repo = 'sheerun/vim-polyglot'
-hook_add = '''
-let g:polyglot_disabled = ['markdown', 'tsx', 'typescript']
-'''
-
-[[plugins]]
-repo = 'ayu-theme/ayu-vim'
-hook_add = '''
-set termguicolors
-let ayucolor="dark"
-colorscheme ayu
-'''
-
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
-
-[[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
 source ~/.config/nvim/plugins/airline.vim
