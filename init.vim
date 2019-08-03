@@ -10,6 +10,7 @@ if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
+  call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
   call dein#end()
   call dein#save_state()
 endif
@@ -19,4 +20,21 @@ endif
 
 filetype plugin indent on
 syntax enable
-
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
+set shiftround
+set splitright
+set cursorline
+set clipboard=unnamed
+set hls
+set list
+set wrap
+set textwidth=0 
+inoremap jj <Esc>
+nnoremap j gj
+nnoremap k gk
+tnoremap <Esc> <C-\><C-n>

@@ -2,13 +2,9 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-depends = 'context_filetype.vim'
-on_event = 'InsertEnter'
-hook_add = '''
-source ~/.config/nvim/plugins/deoplete.vim
-call deoplete#enable()
-'''
+repo = 'zchee/deoplete-jedi'
+on_i = 1
+on_ft = 'python'
 
 [[plugins]]
 repo = 'Shougo/neoyank.vim'
@@ -21,5 +17,26 @@ repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
-source ~/.config/nvim/plugins/airline.vim
+
+  let g:airline_mode_map = {
+    \ '__' : '-',
+    \ 'n'  : 'N',
+    \ 'i'  : 'I',
+    \ 'R'  : 'R',
+    \ 'c'  : 'C',
+    \ 'v'  : 'V',
+    \ 'V'  : 'V',
+    \ 's'  : 'S',
+    \ 'S'  : 'S',
+    \ }
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#virtualenv#enabled = 1
+  let g:airline#extensions#hunks#enabled = 0
+  let g:airline#extensions#ale#enabled = 1
+  let g:airline#extensions#ale#error_symbol = 'E:'
+  let g:airline#extensions#ale#warning_symbol = 'W:'
 '''
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
