@@ -206,6 +206,7 @@ xmap <C-k> <Plug>(neosnippet_expand_target)
 if has('conceal')
     set conceallevel=2 concealcursor=niv
 endif
+let g:neosnippet#snippets_directory='~/.config/nvim/snippets/'
 '''
 
 [[plugins]]
@@ -327,3 +328,15 @@ repo = 'raghur/fruzzy'
 on_source = ['denite.nvim']
 hook_source = 'let g:fruzzy#sortonempty = 0'
 hook_post_update = 'call fruzzy#install()'
+
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
+
+[[plugins]]
+repo = 'thosakwe/vim-flutter'
+
+[[plugins]]
+repo= 'fatih/vim-go'
+hook_add = '''
+    let g:go_fmt_command = "goimports"
+'''
